@@ -1,2 +1,32 @@
-fastapi
-uvicorn[standard] 
+# FastAPI and web framework
+fastapi==0.68.0
+uvicorn[standard]==0.15.0
+python-multipart==0.0.5
+
+# Deep Learning and Computer Vision
+torch==1.13.1
+torchvision==0.14.1
+ultralytics==8.0.20
+transformers==4.21.0
+git+https://github.com/openai/CLIP.git
+Pillow==9.5.0
+opencv-python==4.7.0.72
+numpy==1.23.5
+
+# Similarity Search
+faiss-cpu==1.7.4
+
+# Web Scraping
+beautifulsoup4==4.12.2
+requests==2.28.1
+aiohttp==3.8.1
+
+# Data Processing
+pandas==1.5.3
+pydantic==1.10.12
+
+# Frontend
+streamlit==1.25.0
+
+# Utilities
+python-dotenv==0.20.0 

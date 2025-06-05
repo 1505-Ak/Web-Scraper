@@ -1,0 +1,31 @@
+# FastCarVision Environment Configuration
+
+# Application Settings
+DEBUG=false
+APP_NAME=FastCarVision
+VERSION=1.0.0
+
+# Device Configuration (set to "cuda" if you have a GPU)
+CUDA_AVAILABLE=false
+
+# Model Settings
+CAR_DETECTION_MODEL=yolov8n.pt
+CLIP_MODEL=ViT-B/32
+
+# Web Scraping Settings
+MAX_CONCURRENT_REQUESTS=10
+REQUEST_TIMEOUT=30
+USER_AGENT=FastCarVision/1.0
+
+# Scraper Configuration
+ENABLE_AUTOTRADER=true
+ENABLE_EBAY_MOTORS=false
+ENABLE_CARS_COM=true
+
+# Image Processing
+MAX_IMAGE_SIZE=1024
+SUPPORTED_FORMATS=jpg,jpeg,png,bmp
+
+# FAISS Configuration
+FAISS_INDEX_PATH=data/car_embeddings.index
+EMBEDDING_DIM=512 
