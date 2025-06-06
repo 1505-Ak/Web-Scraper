@@ -28,7 +28,7 @@ class Settings(BaseSettings):
     
     # Scrapers
     enable_autotrader: bool = True
-    enable_ebay_motors: bool = True
+    enable_ebay_motors: bool = False
     enable_cars_com: bool = True
     
     def __init__(self, **kwargs):
@@ -46,8 +46,15 @@ class Settings(BaseSettings):
             except ImportError:
                 print("PyTorch not available, using CPU")
                 self.device = "cpu"
+        
+        # Handle supported formats from environment if provided
+        formats_env = os.getenv("SUPPORTED_FORMATS")
+        if formats_env:
+            self.supported_formats = [f.strip() for f in formats_env.split(",")]
     
     class Config:
         env_file = ".env"
+        # Don't try to parse env vars as JSON
+        use_enum_values = True
 
 settings = Settings() 
